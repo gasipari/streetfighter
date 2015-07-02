@@ -53,9 +53,9 @@ body {
 	position: relative;
 	z-index: 10;
 	top: 167px;
-	left: 520px;
+	left: -100px;
 }
 
-* {
+/** {
   outline: red 1px solid;
-}
+}*/
