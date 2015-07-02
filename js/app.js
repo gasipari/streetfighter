@@ -21,17 +21,30 @@ $(document).ready(function() {
 			500,
 			function() {
 				$(this).hide();
-				$(this).css('left', '-100px');
+				$(this).css('left', '-120px');
 			})
-		
-		
-
 	})
 	.mouseup(function() {
 		// ryu goes back to his ready position
 		console.log('mouseup');
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
+	})
+	
+	$(document).keydown(function(event){
+		if(event.keyCode == 88){
+			// $('.ryu-still').hide();
+			$('.ryu-ready').hide();
+			$('.ryu-still').hide();
+			$('.ryu-cool').show();
+		}
+	})
+	$(document).keyup(function(event){
+		if(event.keyCode == 88){
+			$('.ryu-cool').hide();
+			$('.ryu-still').show();
+
+		}
 	})
 })
 
